@@ -1,0 +1,14 @@
+.banner-img{
+    background-image: url('../../images/banner.png');
+    height: 600px;
+    width: 100%;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+/* .search-field{
+    margin-top: 200px;
+} */
