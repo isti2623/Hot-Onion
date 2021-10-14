@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Nav, Navbar, Stack } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../images/logo.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 const Header = () => {
@@ -15,18 +17,18 @@ const Header = () => {
                         <Nav className="ms-auto">
                             <Stack direction="horizontal" gap={3}>
                                 <NavLink
-                                    className="text-decoration-none text-dark"
+                                    className="text-decoration-none text-dark fs-5"
                                     to="/cart"
                                     activeStyle={{
                                         fontWeight: "bold",
                                         color: "red"
                                     }}
                                 >
-                                    Cart
+                                    Cart<FontAwesomeIcon icon={faCartPlus} />
                                 </NavLink>
                                 <NavLink
                                     to="/login"
-                                    className="text-decoration-none text-dark"
+                                    className="text-decoration-none text-dark fs-5"
                                     activeStyle={{
                                         fontWeight: "bold",
                                         color: "red"

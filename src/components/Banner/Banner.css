@@ -9,6 +9,9 @@
     position: relative;
     
 }
-/* .search-field{
-    margin-top: 200px;
-} */
+.search-field{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 600px;
+}
