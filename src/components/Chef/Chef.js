@@ -14,7 +14,9 @@ const Chef = (props) => {
                             {desc}
                         </Card.Text>
                         <img src={icon} alt="" srcset="" />
+                        <p className='text-danger fw-bold'>See More</p>
                     </Card.Body>
+
                 </Card>
             </Col>
         </div>
