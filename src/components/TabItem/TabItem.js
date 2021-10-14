@@ -24,6 +24,7 @@ const TabItem = () => {
                     <div className="btn btn-danger" onClick={() => filterItem('breakfast')}>Breakfast</div>
                     <div className="btn btn-danger" onClick={() => filterItem('lunch')}>Lunch</div>
                     <div className="btn btn-danger" onClick={() => filterItem('dinner')}>Dinner</div>
+                    <div className="btn btn-danger" onClick={() => setItems(items)}>All</div>
                 </div>
             </div>
             <Row xs={1} md={2} lg={4} className="g-4 tab-item">
