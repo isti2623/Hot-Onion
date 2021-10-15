@@ -11,7 +11,7 @@ const Banner = () => {
                     <div className='search-field'>
                         <div className=''>
                             <div>
-                                <h1 className="text-center text-dark  mt-2 p-2">Best Food Waiting Fore Your Belly</h1>
+                                <h1 className="text-center text-dark  mt-2 p-2 fw-bold">Best Food Waiting Fore Your Belly</h1>
                             </div>
                             <div>
                                 <InputGroup className="my-3">
