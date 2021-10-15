@@ -4,9 +4,11 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../../images/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+import useAuth from '../../hooks/useAuth';
 
 
 const Header = () => {
+    const { user, logout } = useAuth();
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" variant="dark">
@@ -26,6 +28,8 @@ const Header = () => {
                                 >
                                     Cart<FontAwesomeIcon icon={faCartPlus} />
                                 </NavLink>
+
+
                                 <NavLink
                                     to="/login"
                                     className="text-decoration-none text-dark fs-5"
@@ -36,6 +40,9 @@ const Header = () => {
                                 >
                                     Login
                                 </NavLink>
+
+
+
                                 <NavLink
                                     to="/signup"
                                     activeStyle={{
@@ -45,6 +52,7 @@ const Header = () => {
                                 >
                                     <div className="btn btn-danger">Sign Up</div>
                                 </NavLink>
+                                <div className="btn btn-light" onClick={logout}>logOut</div>
                             </Stack>
                         </Nav>
                     </Navbar.Collapse>
