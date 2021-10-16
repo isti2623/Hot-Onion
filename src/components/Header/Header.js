@@ -61,6 +61,7 @@ const Header = () => {
                                     </>
                                 }
                                 <img className='details-header' src={user.photoURL} alt="" srcset="" />
+                                <span>{user.displayName}</span>
                                 {
                                     user.email &&
                                     <div>
