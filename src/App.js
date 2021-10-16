@@ -11,6 +11,8 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import FoodDetails from './components/FoodDetails/FoodDetails';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Cart from './components/Cart/Cart';
+import NotFound from './components/NotFound/NotFound';
 
 
 
@@ -30,8 +32,14 @@ function App() {
             <PrivateRoute exact path='/fooddetails/:foodId'>
               <FoodDetails></FoodDetails>
             </PrivateRoute>
+            <PrivateRoute exact path='/cart'>
+              <Cart></Cart>
+            </PrivateRoute>
             <Route exact path='/login'>
               <Login></Login>
+            </Route>
+            <Route path='*'>
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>

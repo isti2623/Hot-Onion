@@ -7,7 +7,12 @@ const Login = () => {
 
     return (
         <div className='text-center mt-5'>
-            <h1 className='text-danger'>{user.displayName}</h1>
+            {
+                user.email ?
+                    <h1 className='text-success'>{user.displayName}</h1>
+                    :
+                    <h1 className='text-danger'>Please Login</h1>
+            }
             <br />
             {
                 user.email ?
