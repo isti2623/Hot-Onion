@@ -7,11 +7,15 @@ const Login = () => {
 
     return (
         <div className='text-center mt-5'>
-            <h2>Please Login </h2>
             <h1 className='text-danger'>{user.displayName}</h1>
-            <img src={user.photoURL} alt="" srcset="" />
             <br />
-            <button className='mt-3' onClick={signInUsingGoogle}>Google Sign In</button>
+            {
+                user.email ?
+                    <h1>Your Have Successfully Looged in</h1>
+                    :
+                    <button className='mt-3' onClick={signInUsingGoogle}>Google Sign In</button>
+            }
+
             <br />
             <Link to="/home">Back home</Link>
         </div>
