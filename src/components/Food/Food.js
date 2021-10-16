@@ -1,8 +1,10 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Food = (props) => {
-    const { title, desc, img, category, price } = props.item;
+    const { title, desc, img, category, price, id } = props.item;
+    const url = `/fooddetails/${id}`
     return (
         <div>
             <Col>
@@ -16,7 +18,7 @@ const Food = (props) => {
                         <p>Category: {category}</p>
                         <h6>Price: {price}</h6>
                     </Card.Body>
-                    <div className="btn btn-danger">Details</div>
+                    <Link to={url} className="btn btn-danger">Details</Link>
                 </Card>
             </Col>
         </div>

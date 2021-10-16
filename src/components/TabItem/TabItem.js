@@ -6,7 +6,7 @@ import './TabItem.css'
 const TabItem = () => {
     const [items, setItems] = useState([])
     useEffect(() => {
-        fetch('./lunch.json')
+        fetch('https://raw.githubusercontent.com/isti2623/Hot-Onion/main/public/lunch.json')
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])
