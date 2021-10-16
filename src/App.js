@@ -10,6 +10,7 @@ import AuthProvider from './context/AuthProvider';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import FoodDetails from './components/FoodDetails/FoodDetails';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 
@@ -26,9 +27,9 @@ function App() {
             <Route exact path='/home'>
               <Home></Home>
             </Route>
-            <Route exact path='/fooddetails/:foodId'>
+            <PrivateRoute exact path='/fooddetails/:foodId'>
               <FoodDetails></FoodDetails>
-            </Route>
+            </PrivateRoute>
             <Route exact path='/login'>
               <Login></Login>
             </Route>
