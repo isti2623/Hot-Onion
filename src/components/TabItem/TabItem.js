@@ -5,17 +5,24 @@ import './TabItem.css'
 
 const TabItem = () => {
     const [items, setItems] = useState([])
+    const [showItems, setShowItems] = useState([])
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/isti2623/Hot-Onion/main/public/lunch.json')
             .then(res => res.json())
-            .then(data => setItems(data))
+            .then(data => {
+
+                setItems(data)
+                setShowItems(data);
+            })
     }, [])
 
     const filterItem = (categItem) => {
         const updatedItems = items.filter((curEle) => {
             return curEle.category === categItem;
         });
-        setItems(updatedItems);
+        setShowItems(updatedItems);
+
+
     }
     return (
         <>
@@ -24,12 +31,12 @@ const TabItem = () => {
                     <div className="btn btn-danger" onClick={() => filterItem('breakfast')}>Breakfast</div>
                     <div className="btn btn-danger" onClick={() => filterItem('lunch')}>Lunch</div>
                     <div className="btn btn-danger" onClick={() => filterItem('dinner')}>Dinner</div>
-                    <div className="btn btn-danger" onClick={() => setItems(items)}>All</div>
+                    <div className="btn btn-danger" onClick={() => setShowItems(items)}>All</div>
                 </div>
             </div>
             <Row xs={1} md={2} lg={4} className="g-4 tab-item">
                 {
-                    items.map(item => <Food
+                    showItems.map(item => <Food
                         key={item.id}
                         item={item}
                     >
